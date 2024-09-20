@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #202020;
+  --background-color: #ffffff;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #ffffff;
@@ -56,7 +56,7 @@
   --background-color: #0c0e1c;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --accent-color: #202020;
+  --accent-color: #ffffff;
   --surface-color: #0c0e1c;
   --contrast-color: #ffffff;
 }
