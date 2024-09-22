@@ -53,18 +53,10 @@
 }
 
 .accent-background {
-  --background-color: #2b395b;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --accent-color: #ffffff;
-  --surface-color: #2b395b;
-  --contrast-color: #ffffff;
-  --background-image: url('https://qu.ax/UCEc.jpg');
+  --background-image: url('https://qu.ax/UCEc.jpg'); /* Replace with your image URL */
   background-image: var(--background-image);
-  background-size: cover;
-  background-position: center;
-  background-color: var(--background-color); /* Fallback color */
-}
+  background-size: cover; /* Optional: Set the background size to cover the entire page */
+  background-position: center; /* Optional: Set the background position to center */
 }
 
 /* Smooth scroll */
