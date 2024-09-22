@@ -42,6 +42,9 @@
 .light-background {
   --background-color: #202832;
   --surface-color: #1f2224;
+  background-image: url('https://qu.ax/UCEc.jpg'); /* Add this line */
+  background-size: cover; /* Optional: scale the image to cover the entire background */
+  background-position: center; /* Optional: center the image horizontally and vertically */
 }
 
 .dark-background {
@@ -50,6 +53,9 @@
   --heading-color: #ffffff;
   --surface-color: #1f2224;
   --contrast-color: #ffffff;
+  background-image: url('https://qu.ax/UCEc.jpg'); /* Add this line */
+  background-size: cover; /* Optional: scale the image to cover the entire background */
+  background-position: center; /* Optional: center the image horizontally and vertically */
 }
 
 .accent-background {
@@ -59,8 +65,10 @@
   --accent-color: #ffffff;
   --surface-color: #2b395b;
   --contrast-color: #ffffff;
+  background-image: url('https://qu.ax/UCEc.jpg'); /* Add this line */
+  background-size: cover; /* Optional: scale the image to cover the entire background */
+  background-position: center; /* Optional: center the image horizontally and vertically */
 }
-
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
