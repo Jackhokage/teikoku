@@ -59,12 +59,6 @@
 }
 
 .accent-background {
-  --background-color: #2b395b;
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
-  --accent-color: #ffffff;
-  --surface-color: #2b395b;
-  --contrast-color: #ffffff;
   background-image: url('https://qu.ax/csfN.jpg'); /* Add this line */
   background-size: cover; /* Optional: scale the image to cover the entire background */
   background-position: center; /* Optional: center the image horizontally and vertically */
