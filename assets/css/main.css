@@ -87,7 +87,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--accent-color), transparent 0%);
   text-decoration: none;
 }
 
