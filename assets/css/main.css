@@ -53,14 +53,13 @@
 }
 
 .accent-background {
-  --background-image: url('https://qu.ax/UCEc.jpg'); /* Replace with your image URL */
-  background-image: var(--background-image);
+  background-image: var(--accent-background-image); /* Use var() to apply the variable */
   background-size: cover; /* Optional: Set the background size to cover the entire page */
   background-position: center; /* Optional: Set the background position to center */
 }
 
-/* Smooth scroll */
 :root {
+  --accent-background-image: url('https://qu.ax/UCEc.jpg'); /* Define the variable here */
   scroll-behavior: smooth;
 }
 
@@ -93,7 +92,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
-
+ 
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
