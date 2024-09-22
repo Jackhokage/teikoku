@@ -25,7 +25,7 @@
   --accent-color: #444444; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #1f2224; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  background-image: url('https://qu.ax/TZdN.jpg'); /* Add this line to set the background image */
+  background-image: url('https://qu.ax/oFEv.jpg'); /* Add this line to set the background image */
   background-size: cover; /* Optional: scale the background image to cover the entire page */
   background-position: center; /* Optional: center the background image */
 }
