@@ -8,7 +8,7 @@
   <meta name="description" content="🔥Bienvenido humano decadente a la mejor comunidad de Anime New Teikoku, disfruta tu permanencia🪐">
   <meta name="keywords" content="">
 
-    <!-- Favicons -->
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/favicon.png" rel="apple-touch-icon">
   <!-- Fonts -->
@@ -36,10 +36,23 @@
 </head>
 
 <body class="index-page">
-  <audio id="background-music" autoplay loop>
-    <source src="sound/ChristianBasso&HaienQiu-Flowers.mp3" autoplay></audio>
-    <div id="lyrics">
+  <audio id="background-music" autoplay loop muted>
+    <source src="sound/ChristianBasso&HaienQiu-Flowers.mp3" type="audio/mp3">
+  </audio>
 
+  <script>
+    const audio = document.getElementById('background-music');
+
+    document.addEventListener('DOMContentLoaded', () => {
+      audio.play();
+    });
+
+    document.addEventListener('click', () => {
+      audio.muted = false;
+    });
+  </script>
+
+  <div id="lyrics">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
   
