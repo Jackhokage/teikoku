@@ -23,8 +23,6 @@
         
         .biography-text {
             color: #ffffff;
-            border: 1px solid #1f2224;
-            border-radius: 10px;
             font-size: 28px;
             font-family: Arial, sans-serif;
         }
@@ -35,26 +33,69 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+        
+        /* Add styles for image display */
+        .biography-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <h1 class="biography-title">Blog-Teikoku</h1>
-    <div class="biography-frame">
+    <div id="biography-container">
         <!-- Biography content will be displayed here -->
-        <p class="biography-text">No biographies submitted yet.</p>
     </div>
     
     <!-- Form to submit biography data -->
-    <form>
+    <form id="biography-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
         <label for="bio">Biography:</label>
         <textarea id="bio" name="bio"></textarea><br><br>
+        <label for="image-url">Image URL:</label>
+        <input type="url" id="image-url" name="image-url"><br><br>
         <input type="submit" value="Submit">
     </form>
     
     <script>
         // JavaScript code to handle form submission and display biographies will go here
+        const biographyContainer = document.getElementById('biography-container');
+        const biographyForm = document.getElementById('biography-form');
+        
+        biographyForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const bio = document.getElementById('bio').value;
+            const imageUrl = document.getElementById('image-url').value;
+            
+            // Create a new biography element
+            const biographyElement = document.createElement('div');
+            biographyElement.className = 'biography-frame';
+            
+            // Add image to biography element
+            const imageElement = document.createElement('img');
+            imageElement.src = imageUrl;
+            imageElement.className = 'biography-image';
+            biographyElement.appendChild(imageElement);
+            
+            // Add biography text to biography element
+            const biographyTextElement = document.createElement('p');
+            biographyTextElement.className = 'biography-text';
+            biographyTextElement.textContent = bio;
+            biographyElement.appendChild(biographyTextElement);
+            
+            // Add biography title to biography element
+            const biographyTitleElement = document.createElement('h2');
+            biographyTitleElement.className = 'biography-title';
+            biographyTitleElement.textContent = name;
+            biographyElement.appendChild(biographyTitleElement);
+            
+            // Add biography element to container
+            biographyContainer.appendChild(biographyElement);
+        });
     </script>
 </body>
-</html>
+    </html>
