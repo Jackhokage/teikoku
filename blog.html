@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-Teikoku</title>
+    <style>
+        /* Add a background image */
+        body {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Set attractive text colors and description frames */
+        .biography-frame {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .biography-text {
+            color: #333;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .biography-title {
+            color: #00698f;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="biography-title">Blog-Teikoku</h1>
+    <div class="biography-frame">
+        <!-- Biography content will be displayed here -->
+        <p class="biography-text">No biographies submitted yet.</p>
+    </div>
+    
+    <!-- Form to submit biography data -->
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="bio">Biography:</label>
+        <textarea id="bio" name="bio"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        // JavaScript code to handle form submission and display biographies will go here
+    </script>
+</body>
+</html>
