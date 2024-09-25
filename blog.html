@@ -13,7 +13,7 @@
         }
         
         /* Set attractive text colors and description frames */
-        .biography-frame {
+        .team-member {
             background-color: #470d12;
             padding: 20px;
             border: 1px solid #1f2224;
@@ -21,31 +21,57 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
-        .biography-text {
-            color: #ffffff;
-            font-size: 28px;
-            font-family: Arial, sans-serif;
+        .member-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
         }
         
-        .biography-title {
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .social {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        
+        .social a {
+            margin-right: 10px;
+            color: #ffffff;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h4 {
             color: #00698f;
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
         }
         
-        /* Add styles for image display */
-        .biography-image {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin: 10px;
+        .member-info span {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .member-info p {
+            color: #ffffff;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <h1 class="biography-title">Blog-Teikoku</h1>
-    <div id="biography-container">
+    <div id="biography-container" class="row">
         <!-- Biography content will be displayed here -->
     </div>
     
@@ -53,49 +79,45 @@
     <form id="biography-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name"><br><br>
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role"><br><br>
         <label for="bio">Biography:</label>
         <textarea id="bio" name="bio"></textarea><br><br>
         <label for="image-url">Image URL:</label>
         <input type="url" id="image-url" name="image-url"><br><br>
+        <label for="twitter-url">Twitter URL (opcional):</label>
+        <input type="url" id="twitter-url" name="twitter-url"><br><br>
+        <label for="facebook-url">Facebook URL (opcional):</label>
+        <input type="url" id="facebook-url" name="facebook-url"><br><br>
+        <label for="instagram-url">Instagram URL (opcional):</label>
+        <input type="url" id="instagram-url" name="instagram-url"><br><br>
+        <label for="linkedin-url">LinkedIn URL (opcional):</label>
+        <input type="url" id="linkedin-url" name="linkedin-url"><br><br>
         <input type="submit" value="Submit">
     </form>
     
     <script>
-        // JavaScript code to handle form submission and display biographies will go here
-        const biographyContainer = document.getElementById('biography-container');
-        const biographyForm = document.getElementById('biography-form');
-        
-        biographyForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const bio = document.getElementById('bio').value;
-            const imageUrl = document.getElementById('image-url').value;
-            
-            // Create a new biography element
-            const biographyElement = document.createElement('div');
-            biographyElement.className = 'biography-frame';
-            
-            // Add image to biography element
-            const imageElement = document.createElement('img');
-            imageElement.src = imageUrl;
-            imageElement.className = 'biography-image';
-            biographyElement.appendChild(imageElement);
-            
-            // Add biography text to biography element
-            const biographyTextElement = document.createElement('p');
-            biographyTextElement.className = 'biography-text';
-            biographyTextElement.textContent = bio;
-            biographyElement.appendChild(biographyTextElement);
-            
-            // Add biography title to biography element
-            const biographyTitleElement = document.createElement('h2');
-            biographyTitleElement.className = 'biography-title';
-            biographyTitleElement.textContent = name;
-            biographyElement.appendChild(biographyTitleElement);
-            
-            // Add biography element to container
-            biographyContainer.appendChild(biographyElement);
-        });
-    </script>
-</body>
-    </html>
+        // Datos de las biografías
+        const biographies = [
+            {
+                name: 'ÁNGELES',
+                role: 'SUPERIOR',
+                bio: 'Que miras tonoto, te gusto o que?',
+                imageUrl: 'assets/img/team/team-1.jpg',
+                social: [
+                    { icon: 'bi bi-twitter-x', url: '' },
+                    { icon: 'bi bi-facebook', url: '' },
+                    { icon: 'bi bi-instagram', url: '' },
+                    { icon: 'bi bi-linkedin', url: '' }
+                ]
+            },
+            {
+                name: 'Nombre 2',
+                role: 'Rol 2',
+                bio: 'Biografía 2',
+                imageUrl: 'assets/img/team/team-2.jpg',
+                social: [
+                    { icon: 'bi bi-twitter-x', url: '' },
+                    { icon: 'bi bi-facebook', url: '' },
+                    { icon: 'bi bi-instagram', url: '' },
+                    { icon: 'bi bi-linkedin',
