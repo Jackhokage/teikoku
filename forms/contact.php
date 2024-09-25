@@ -27,7 +27,7 @@
   /*
   $contact->smtp = array(
     'host' => 'cmd.newteikoku@gmail.com',
-    'username' => 'new teikoku',
+    'username' => 'new Teikoku',
     'password' => 'comunidadnt2000',
     'port' => '587'
   );
