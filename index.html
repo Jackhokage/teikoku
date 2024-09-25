@@ -36,24 +36,19 @@
 </head>
 
 <body class="index-page">
-  <audio id="background-music" autoplay loop muted>
+  <audio id="background-music" autoplay loop>
     <source src="https://qu.ax/Cbvk.mp3" type="audio/mp3">
   </audio>
 
   <script>
     const audio = document.getElementById('background-music');
 
-    document.addEventListener('DOMContentLoaded', () => {
-      audio.play();
-    });
-
-    document.addEventListener('click', () => {
-      audio.muted = false;
-    });
+    // Reproducir el audio automáticamente cuando se carga la página
+    audio.play();
   </script>
 
   <div id="lyrics">
- </div>
+  </div>
  
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
