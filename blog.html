@@ -14,21 +14,22 @@
         
         /* Set attractive text colors and description frames */
         .biography-frame {
-            baqckground-color: #596f87;
+            background-color: var(--frame-background-color);
             padding: 20px;
-            border: 1px solid #ffffff;
+            border: 1px solid var(--frame-border-color);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
         }
         
         .biography-text {
-            color: #ffffff;
+            color: var(--text-color);
             font-size: 18px;
             font-family: Arial, sans-serif;
         }
         
         .biography-title {
-            color: #00698f;
+            color: var(--title-color);
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 10px;
@@ -41,62 +42,88 @@
             border-radius: 50%;
             margin: 10px;
         }
+        
+        /* Add styles for user input section */
+        .user-input-section {
+            background-color: var(--input-background-color);
+            padding: 20px;
+            border: 1px solid var(--input-border-color);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Add styles for team members */
+        .team-member {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+        }
+        
+        .member-info h4 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .member-info span {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .member-info p {
+            font-size: 16px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
     <h1 class="biography-title">Blog-Teikoku</h1>
-    <div id="biography-container">
-        <!-- Biography content will be displayed here -->
-    </div>
     
-    <script>
-        // Datos de las biografías
-        const biographies = [
-            {
-                name: 'Lucas',
-                bio: 'oooooooo',
-                imageUrl: 'https://qu.ax/zbhH.jpg'
-            },
-            {
-                name: 'Nombre 2',
-                bio: 'Biografía 2',
-                imageUrl: 'https://qu.ax/zbhH.jpg'
-            },
-            {
-                name: 'Nombre 3',
-                bio: 'Biografía 3',
-                imageUrl: 'https://qu.ax/zbhH.jpg'
-            }
-        
-        // Función para crear un elemento de biografía
-        function createBiographyElement(biography) {
-            const biographyElement = document.createElement('div');
-            biographyElement.className = 'biography-frame';
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>SUPERIORES</h2>
+        <p>UN EQUIPO DISPUESTO A AYUDARTE EN ESTE EXTRAORDINARIA PASADIA POR EL MUNDO DEL ANIME</p>
+    </div><!-- End Section Title -->
+    
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Biography content will be displayed here -->
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="https://qu.ax/zbhH.jpg" class="img-fluid" alt="">
+                        <div class="social">
+                            <a href=""><i class="bi bi-twitter-x"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h4>ÁNGELES</h4>
+                        <span>SUPERIOR</span>
+                        <p>Que miras tonoto, te gusto o que?</p>
+                    </div>
+                </div>
+            </div><!-- End Team Member -->
             
-            const imageElement = document.createElement('img');
-            imageElement.src = biography.imageUrl;
-            imageElement.className = 'biography-image';
-            biographyElement.appendChild(imageElement);
-            
-            const biographyTextElement = document.createElement('p');
-            biographyTextElement.className = 'biography-text';
-            biographyTextElement.textContent = biography.bio;
-            biographyElement.appendChild(biographyTextElement);
-            
-            const biographyTitleElement = document.createElement('h2');
-            biographyTitleElement.className = 'biography-title';
-            biographyTitleElement.textContent = biography.name;
-            biographyElement.appendChild(biographyTitleElement);
-            
-            return biographyElement;
-        }
-        
-        // Agregar biografías al contenedor
-        const biographyContainer = document.getElementById('biography-container');
-        biographies.forEach(biography => {
-            const biographyElement = createBiographyElement(biography);
-            biographyContainer.appendChild(biographyElement);
-        });
-    </script>
-</body>
-</html>
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100
