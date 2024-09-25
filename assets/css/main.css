@@ -25,7 +25,7 @@
   --accent-color: #0c6485; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #8f1717; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  background-image: url('https://img.freepik.com/vector-gratis/fondo-geometrico-degradado-diferentes-formas_23-2148816112.jpg'); /* Add this line to set the background image */
+  background-image: url('https://img.freepik.com/vector-gratis/elegante-salvapantallas-detalles-dorados_23-2148430377.jpg'); /* Add this line to set the background image */
   background-size: cover; /* Optional: scale the background image to cover the entire page */
   background-position: center; /* Optional: center the background image */
 }
