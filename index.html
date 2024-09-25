@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -35,9 +36,16 @@
 </head>
 
 <body class="index-page">
-  <div id="spotify-player">
-    <iframe src="https://open.spotify.com/embed/playlist/0fGz82uCXd5FFBQFRzoV0s?autoplay=1" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  </div>
+  <audio id="background-music" autoplay loop>
+    <source src="https://open.spotify.com/playlist/0fGz82uCXd5FFBQFRzoV0s?si=5ISrFP_WRtWUABo3GAwr6Q&utm_source=copy-link" type="audio/mp3">
+  </audio>
+
+  <script>
+    const audio = document.getElementById('background-music');
+
+    // Reproducir el audio automáticamente cuando se carga la página
+    audio.play();
+  </script>
 
   <div id="lyrics">
   </div>
