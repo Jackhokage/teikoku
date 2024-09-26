@@ -58,18 +58,9 @@
         }
         
         .vote-option img {
-            width: 100px;
-            height: 100px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-        }
-        
-        .image-container {
-            text-align: center;
-        }
-        
-        .button-container {
-            text-align: center;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -83,24 +74,17 @@
                 <h2>dragón ball</h2>
                 <p>Detalles de votos:</p>
                 <ul>
-                    <li>Votos: <span id="section-1-votes">0</span></li>
-                    <li>Porcentaje: <span id="section-1-percentage">0%</span></li>
+                    <li>Votos de Goku: <span id="section-1-option-1-votes">0</span></li>
+                    <li>Votos de Frezzer: <span id="section-1-option-2-votes">0</span></li>
+                    
                 </ul>
                 <div class="vote-options">
-                    <div class="image-container">
+                    <button class="vote-option" id="section-1-option-1" onclick="vote(1, 1)">
                         <img src="https://img.asmedia.epimg.net/resizer/v2/L726G3JR35DGLG6JBDOS4MAPQ4.jpg" alt="Goku">
-                    </div>
-                    <div class="button-container">
-                        <button class="vote-option" id="section-1-option-1" onclick="vote(1, 1)">Vote</button>
-                    </div>
-                </div>
-                <div class="vote-options">
-                    <div class="image-container">
+                    </button>
+                    <button class="vote-option" id="section-1-option-2" onclick="vote(1, 2)">
                         <img src="https://static.wikia.nocookie.net/pelea-versus/images/1/1c/Final_Form_Frieza_-_DBZ_Frieza_Saga.png" alt="Frezzer">
-                    </div>
-                    <div class="button-container">
-                        <button class="vote-option" id="section-1-option-2" onclick="vote(1, 2)">Vote</button>
-                    </div>
+                    </button>
                 </div>
             </li>
             <!-- Sección 2 de votos -->
@@ -108,12 +92,9 @@
                 <h2>Naruto</h2>
                 <p>Detalles de votos:</p>
                 <ul>
-                    <li>Votos: <span id="section-2-votes">0</span></li>
-                    <li>Porcentaje: <span id="section-2-percentage">0%</span></li>
+                    <li>Votos de Naruto: <span id="section-2-option-1-votes">0</span></li>
+                    <li>Votos de Sasuke: <span id="section-2-option-2-votes">0</span></li>
+                    
                 </ul>
                 <div class="vote-options">
-                    <div class="image-container">
-                        <img src="https://static.wikia.nocookie.net/naruto/images/a/a2/Naruto_Uzumaki_Parte_II_Anime.png" alt="Naruto">
-                    </div>
-                    <div class="button-container">
-                        <button class="vote-option" id="section-2-option-
+                    <button class="vote-option" id="section-2-option-1" onclick
