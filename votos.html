@@ -58,9 +58,18 @@
         }
         
         .vote-option img {
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        .button-container {
+            text-align: center;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -78,12 +87,20 @@
                     <li>Porcentaje: <span id="section-1-percentage">0%</span></li>
                 </ul>
                 <div class="vote-options">
-                    <button class="vote-option" id="section-1-option-1">
+                    <div class="image-container">
                         <img src="https://img.asmedia.epimg.net/resizer/v2/L726G3JR35DGLG6JBDOS4MAPQ4.jpg" alt="Goku">
-                    </button>
-                    <button class="vote-option" id="section-1-option-2">
+                    </div>
+                    <div class="button-container">
+                        <button class="vote-option" id="section-1-option-1">Vote</button>
+                    </div>
+                </div>
+                <div class="vote-options">
+                    <div class="image-container">
                         <img src="https://static.wikia.nocookie.net/pelea-versus/images/1/1c/Final_Form_Frieza_-_DBZ_Frieza_Saga.png" alt="Frezzer">
-                    </button>
+                    </div>
+                    <div class="button-container">
+                        <button class="vote-option" id="section-1-option-2">Vote</button>
+                    </div>
                 </div>
             </li>
             <!-- Sección 2 de votos -->
@@ -95,30 +112,13 @@
                     <li>Porcentaje: <span id="section-2-percentage">0%</span></li>
                 </ul>
                 <div class="vote-options">
-                    <button class="vote-option" id="section-2-option-1">
+                    <div class="image-container">
                         <img src="https://static.wikia.nocookie.net/naruto/images/a/a2/Naruto_Uzumaki_Parte_II_Anime.png" alt="Naruto">
-                    </button>
-                    <button class="vote-option" id="section-2-option-2">
-                        <img src="https://static.wikia.nocookie.net/naruto/images/7/7d/Sasuke_Uchiha_Periodo_de_Cambios_Anime.png" alt="Sasuke">
-                    </button>
+                    </div>
+                    <div class="button-container">
+                        <button class="vote-option" id="section-2-option-1">Vote</button>
+                    </div>
                 </div>
-            </li>
-            <!-- Agrega más secciones de votos aquí -->
-        </ul>
-    </section>
-    
-    <!-- Script para actualizar los votos en tiempo real -->
-    <script>
-        // Variables para los colores de texto editables
-        const section1TextColor = '#333';
-        const section2TextColor = '#666';
-        
-        // Variables para los votos actuales
-        let section1Votes = 0;
-        let section2Votes = 0;
-        
-        // WebSocket para obtener los votos actuales
-        const socket = new WebSocket('ws://localhost:8080');
-        
-        socket.onmessage = (event) => {
-            const data = JSON
+                <div class="vote-options">
+                    <div class="image-container">
+                       
