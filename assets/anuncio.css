@@ -24,7 +24,7 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-image: url('https://img.freepik.com/vector-gratis/fondo-capas-papel-oscuro_23-2148396613.jpg'); /* Add this line */
     background-size: cover; /* Optional: scale the image to cover the entire background */
@@ -40,7 +40,7 @@ body {
 .ad {
     margin: 20px;
     width: 250px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-image: url('https://img.freepik.com/vector-gratis/diseno-gradiente-fondo-geometrico_677411-4198.jpg'); /* Add this line */
@@ -68,7 +68,7 @@ body {
 
 .ad p {
     font-size: 14px;
-    color: #666;
+    color: #ffffff;
 }
 
 .social-link {
