@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votaciones en Tiempo Real</title>
+    <style>
+        /* Estilos para el fondo de la página */
+        body {
+            background-image: url('fondo.jpg'); /* Reemplaza con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Estilos para los textos editables */
+        .editable-text {
+            color: var(--text-color); /* Variable para el color de texto editable */
+        }
+        
+        /* Estilos para las secciones de votos */
+        #voting-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        #voting-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #voting-section li {
+            margin-bottom: 20px;
+        }
+        
+        #voting-section button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        #voting-section button:hover {
+            background-color: #3e8e41;
+        }
+        
+        /* Estilos para las opciones de votos */
+        .vote-option {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .vote-option img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección de votaciones -->
+    <section id="voting-section">
+        <h1>Votaciones en Tiempo Real</h1>
+        <ul>
+            <!-- Sección 1 de votos -->
+            <li>
+                <h2>Sección 1</h2>
+                <p>Detalles de votos:</p>
+                <ul>
+                    <li>Votos: <span id="section-1-votes">0</span></li>
+                    <li>Porcentaje: <span id="section-1-percentage">0%</span></li>
+                </ul>
+                <div class="vote-options">
+                    <button class="vote-option" id="section-1-option-1">
+                        <img src="opcion1.jpg" alt="Opción 1">
+                    </button>
+                    <button class="vote-option" id="section-1-option-2">
+                        <img src="opcion2.jpg" alt="Opción 2">
+                    </button>
+                </div>
+            </li>
+            <!-- Sección 2 de votos -->
+            <li>
+                <h2>Sección 2</h2>
+                <p>Detalles de votos:</p>
+                <ul>
+                    <li>Votos: <span id="section-2-votes">0</span></li>
+                    <li>Porcentaje: <span id="section-2-percentage">0%</span></li>
+                </ul>
+                <div class="vote-options">
+                    <button class="vote-option" id="section-2-option-1">
+                        <img src="opcion3.jpg" alt="Opción 3">
+                    </button>
+                    <button class="vote-option" id="section-2-option-2">
+                        <img src="opcion4.jpg" alt="Opción 4">
+                    </button>
+                </div>
+            </li>
+            <!-- Agrega más secciones de votos aquí -->
+        </ul>
+    </section>
+    
+    <!-- Script para actualizar los votos en tiempo real -->
+    <script>
+        // Variables para los colores de texto editables
+        const section1TextColor = '#333';
+        const section2TextColor = '#666';
+        
+        // Variables para los votos actuales
+        let section1Votes = 0;
+        let section2Votes = 0;
+        
+        // WebSocket para obtener los votos actuales
+        const socket = new WebSocket('ws://localhost:8080');
+        
+        socket.onmessage = (event) => {
+            const data = JSON
